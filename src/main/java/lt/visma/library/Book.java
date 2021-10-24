@@ -13,10 +13,10 @@ public class Book {
     private boolean taken;
     private static long counter;
 
-    public Book(){
-        counter++;
-        guid = counter;
-    }
+//    public Book(){
+//        counter++;
+//        guid = counter;
+//    }
 
     public static long getCounter() {
         return counter;
@@ -79,7 +79,7 @@ public class Book {
     }
 
     public void setGuid(long guid) {
-        this.guid = guid;
+        this.guid = ++counter;
     }
 
     public boolean isTaken() {

@@ -1,6 +1,9 @@
 package lt.visma.library;
 
+import org.springframework.beans.factory.annotation.Required;
+
 public class BookRequest {
+
 
     private String userName;
     private int periodInDays;
@@ -31,6 +34,7 @@ public class BookRequest {
     }
 
     public User getUser(){
+        if (userName==null)return null;
         return new User(userName);
     }
 }
